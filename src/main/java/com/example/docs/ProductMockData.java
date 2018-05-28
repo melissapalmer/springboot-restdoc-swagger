@@ -13,4 +13,9 @@ public class ProductMockData {
 
         return products;
     }
+
+    public static Product updateProduct(Product product) {
+        product.setDescription(product.getDescription() + " - modified ");
+        return product;
+    }
 }

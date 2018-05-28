@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,13 @@ public class ProductsController {
         List<Product> products = ProductMockData.buildProductList();
 
         return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/products", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE })
+    public ResponseEntity<Product> updateProduct(@RequestBody Product product) {
+        product = ProductMockData.updateProduct(product);
+
+        return new ResponseEntity<Product>(product, HttpStatus.OK);
     }
 
 }

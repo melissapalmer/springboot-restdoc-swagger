@@ -1,6 +1,7 @@
 package com.example.docs;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -46,6 +47,30 @@ public class ProductsControllerTest extends BaseRestDocTest {
                 ;
 
         //@formatter:on
+    }
+
+    @Test
+    public void createProducts() throws Exception {
+        // @formatter:off
+        Product newProduct = new Product(); 
+        newProduct.setSku("123");
+        newProduct.setDescription("DESCRIPTION");
+       
+         // Convert object to JSON string
+        String json = objectMapper.writeValueAsString(newProduct);
+        System.out.println(json);
+
+        this.mockMvc.perform(post("/products" )
+               // .contextPath(ApiController.API_PATH).with(userToken(false))
+                .contentType(contentType) 
+                .content(json))
+                .andDo(print())
+                .andExpect(status().isOk())
+
+                //.andExpect(jsonPath("$.generateReportRequest.multiple", is(false)))
+                ;
+
+        // @formatter:on
     }
 
 }

@@ -12,3 +12,7 @@ Get a list of valid local products by integrating with our Get Products function
 [[resources-products-get]]
 
 include::{snippets}/api/products-controller-test/get-products/auto-section.adoc[]
+
+[[resources-products-create]]
+
+include::{snippets}/api/products-controller-test/create-products/auto-section.adoc[]
