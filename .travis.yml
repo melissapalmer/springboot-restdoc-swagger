@@ -5,7 +5,7 @@ jdk:
 before_install:
 - chmod +x mvnw
 script:
-- mvn clean package -Dmaven.test.skip=false
+- ./mvnw clean package -Dmaven.test.skip=false
 branches:
   only:
   - master
