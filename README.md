@@ -6,6 +6,7 @@ The aim of this project is to put together Swagger UI, [Spring REST Docs](https:
 
 # Still looking to add
 - Swagger Theme
+- https://stackoverflow.com/questions/50570827/is-it-possible-to-use-spring-auto-restdocs-with-swagger-springfox
 
 
 Check target/asciidoc/html/index.html

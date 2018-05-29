@@ -31,6 +31,7 @@
 
 		<!--Swagger docs -->
 		<swagger2markup.version>1.3.3</swagger2markup.version>
+		<swagger.ui.theme.version>3.0.0</swagger.ui.theme.version>
 
 		<asciidoctor.input.directory>${project.basedir}/src/docs/asciidoc</asciidoctor.input.directory>
 		<swagger.output.dir>${project.build.directory}/swagger</swagger.output.dir>
@@ -108,7 +109,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- SpringFox Swagger UI -->
+		<!-- SpringFox Swagger UI --> 
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -118,7 +119,24 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox.version}</version>
-		</dependency>
+		</dependency>		
+        <dependency>
+           <groupId>io.springfox</groupId>
+           <artifactId>springfox-bean-validators</artifactId>
+           <version>${springfox.version}</version>
+        </dependency>
+        
+        <!-- Swagger UI Themese -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>swagger-ui</artifactId>
+            <version>3.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>swagger-ui-themes</artifactId>
+            <version>${swagger.ui.theme.version}</version>
+        </dependency> 
 
 		<!-- TESTING -->
 		<dependency>
@@ -147,7 +165,6 @@
 			<groupId>capital.scalable</groupId>
 			<artifactId>spring-auto-restdocs-core</artifactId>
 			<version>${spring-auto-restdocs.version}</version>
-			<!-- <scope>test</scope> -->
 		</dependency>
 	</dependencies>
 
@@ -346,6 +363,26 @@
                     </execution> -->
                 </executions>
             </plugin>
+
+			<plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>4.3.0</version>				
+			</plugin>
+			
+			<plugin>
+			    <groupId>org.jacoco</groupId>
+			    <artifactId>jacoco-maven-plugin</artifactId>
+			    <version>0.7.6.201602180812</version>
+			    <executions>
+			        <execution>
+			            <id>prepare-agent</id>
+			            <goals>
+			                <goal>prepare-agent</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin>
 		</plugins>
 	</build>
 
