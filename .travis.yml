@@ -7,7 +7,7 @@ jdk:
 # - mvn -N io.takari:maven:wrapper
 # before_install:
 # - chmod +x mvnw
-script:
+install:
  - ./mvnw clean package -Dmaven.test.skip=false
 branches:
   only:
