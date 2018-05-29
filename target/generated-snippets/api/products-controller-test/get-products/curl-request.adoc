@@ -1,4 +1,0 @@
-[source,bash]
-----
-$ curl 'https://host.domain.com/products' -i -X GET
-----

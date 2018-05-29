@@ -1,6 +1,0 @@
-[source,http,options="nowrap"]
-----
-GET /products HTTP/1.1
-Host: host.domain.com
-
-----
