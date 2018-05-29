@@ -2,3 +2,10 @@ language: java
 sudo: false
 jdk:
 - oraclejdk8
+before_install:
+- chmod +x mvnw
+script:
+- mvn clean package -Dmaven.test.skip=false
+branches:
+  only:
+  - master
