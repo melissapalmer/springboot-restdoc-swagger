@@ -379,9 +379,9 @@
                             <resources>
                                 <resource>
                                     <directory>${project.build.directory}/generated-docs</directory>
-                                    <includes>
+                                    <!-- <includes>
                                         <include>index.html</include>
-                                    </includes>
+                                    </includes> -->
                                     <filtering>false</filtering>
                                 </resource>
                             </resources>
