@@ -1,0 +1,25 @@
+[[resources-api-products-controller-test-create-products]]
+
+=== Update Product 
+
+include::{snippets}/api/products-controller-test/create-products/auto-authorization.adoc[]
+
+include::{snippets}/api/products-controller-test/create-products/auto-method-path.adoc[]
+
+include::{snippets}/api/products-controller-test/create-products/auto-description.adoc[]
+[discrete]
+==== Request fields
+
+include::{snippets}/api/products-controller-test/create-products/auto-request-fields.adoc[]
+[discrete]
+==== Response fields
+
+include::{snippets}/api/products-controller-test/create-products/auto-response-fields.adoc[]
+[discrete]
+==== Example request
+
+include::{snippets}/api/products-controller-test/create-products/http-request.adoc[]
+[discrete]
+==== Example response
+
+include::{snippets}/api/products-controller-test/create-products/http-response.adoc[]

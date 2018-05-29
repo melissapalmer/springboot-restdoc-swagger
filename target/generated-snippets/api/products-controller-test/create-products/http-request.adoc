@@ -1,0 +1,12 @@
+[source,http,options="nowrap"]
+----
+POST /products HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: host.domain.com
+Content-Length: 55
+
+{
+  "sku" : "123",
+  "description" : "DESCRIPTION"
+}
+----

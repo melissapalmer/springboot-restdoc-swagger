@@ -1,0 +1,15 @@
+{{#hasContent}}{{#isPageResponse}}{{pagination-response-adoc}}
+
+{{/isPageResponse}}
+[%autowidth.spread,options="header"]
+|===
+|{{th-path}}|{{th-type}}|{{th-optional}}|{{th-description}}
+
+{{#content}}
+|{{path}}
+|{{type}}
+|{{optional}}
+|{{description}}
+
+{{/content}}
+|==={{/hasContent}}{{#noContent}}{{no-response-body}}{{/noContent}}
