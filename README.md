@@ -1,5 +1,6 @@
 # springboot-restdoc-swagger
 [![Build Status](https://travis-ci.org/melissapalmer/springboot-restdoc-swagger.svg?branch=master)](https://travis-ci.org/melissapalmer/springboot-restdoc-swagger)
+[![Coverage Status](https://coveralls.io/repos/github/melissapalmer/springboot-restdoc-swagger/badge.svg)](https://coveralls.io/github/melissapalmer/springboot-restdoc-swagger)
 
 The aim of this project is to put together Swagger UI, [Spring REST Docs](https://projects.spring.io/spring-restdocs/) / AutoRestDoc for great documentation.
 
