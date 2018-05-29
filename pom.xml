@@ -41,6 +41,7 @@
 		<asciidoctor.pdf.output.directory>${project.build.directory}/asciidoc/pdf</asciidoctor.pdf.output.directory>
 		<swagger.input>${swagger.output.dir}/swagger.json</swagger.input>
 
+        <docs.dir>${project.basedir}/docs</docs.dir>
 	</properties>
 
 	<repositories>
@@ -361,6 +362,31 @@
                             <outputDirectory>${asciidoctor.pdf.output.directory}</outputDirectory>
                         </configuration>
                     </execution> -->
+                </executions>
+            </plugin>
+            
+             <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-index</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${docs.dir}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}/generated-docs</directory>
+                                    <includes>
+                                        <include>index.html</include>
+                                    </includes>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
 
