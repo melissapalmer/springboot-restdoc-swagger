@@ -10,9 +10,9 @@ The aim of this project is to put together Swagger UI, [Spring REST Docs](https:
 - can I add swagger code snippets https://www.npmjs.com/package/swaggerui-snippets
 
 See 
-http://localhost:8080/swagger-ui.html/ for the standard swagger ui
-http://localhost:8080/  for themed version
-http://localhost:8080/v2/api-docs   for the swagger.json file
+- http://localhost:8080/swagger-ui.html/ for the standard swagger ui
+- http://localhost:8080/themed  for themed version
+- http://localhost:8080/v2/api-docs   for the swagger.json file
 
 # Tutorials I have used in setting up this project include
 - https://www.vojtechruzicka.com/documenting-spring-boot-rest-api-swagger-springfox/
