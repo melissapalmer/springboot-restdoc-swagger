@@ -3,10 +3,13 @@ package com.example.docs;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-//@ApiModel(description = "Class representing a product tracked by the application.")
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(description = "Class representing a product tracked by the application.")
 public class Product {
 
-    // @ApiModelProperty(notes = "Unique identifier of the product. No two products can have the same sku.", example = "1", required = true, position = 0)
+    @ApiModelProperty(notes = "Unique identifier of the product. No two products can have the same sku.")
     /**
      * SKU - unique product id
      */

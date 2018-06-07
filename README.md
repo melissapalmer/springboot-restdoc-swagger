@@ -26,3 +26,14 @@ http://localhost:8080/v2/api-docs   for the swagger.json file
 
 For the UI theme
 https://dzone.com/articles/your-own-swagger-ui-on-liberty
+
+
+HAVE A LOOK AT: 
+https://dzone.com/articles/apiee-an-easy-way-to-get-swagger-on-java-ee
+https://github.com/swagger-api/swagger-parser
+https://github.com/conorroche/swagger-doclet
+http://enunciate.webcohesion.com/
+
+Use Javadoc for REST method and parameter descriptions.
+https://github.com/springfox/springfox/issues/1691
+https://github.com/springfox/springfox-javadoc
